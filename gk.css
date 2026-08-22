@@ -1,0 +1,611 @@
+/* ==========================================
+   THE ROYAL ARCHIVE — ADVENTURE GK
+========================================== */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at 15% 10%, rgba(190, 125, 45, 0.18), transparent 25%),
+        radial-gradient(circle at 85% 80%, rgba(20, 110, 105, 0.16), transparent 28%),
+        linear-gradient(
+            135deg,
+            rgb(31, 25, 18),
+            rgb(54, 38, 23) 45%,
+            rgb(24, 43, 42)
+        );
+
+    color: rgb(244, 220, 166);
+
+    font-family: "Cormorant Garamond", serif;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+header {
+    padding-top: 28px;
+}
+
+h1 {
+    text-align: center;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 36px;
+
+    letter-spacing: 4px;
+
+    color: rgb(239, 199, 108);
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.7);
+
+    margin-bottom: 8px;
+}
+
+header h2 {
+    text-align: center;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 19px;
+
+    letter-spacing: 4px;
+
+    color: rgb(202, 178, 128);
+
+    margin-top: 5px;
+}
+
+
+/* ==========================================
+   ADVENTURE ORNAMENT
+========================================== */
+
+.ornament {
+    text-align: center;
+
+    color: rgb(222, 163, 61);
+
+    font-size: 25px;
+
+    margin: 18px 0 28px;
+
+    text-shadow:
+        0 0 10px rgba(222, 163, 61, 0.3);
+}
+
+
+/* ==========================================
+   PROGRESS CARD
+========================================== */
+
+.question-container:first-of-type {
+    max-width: 900px;
+
+    margin: 25px auto 0;
+
+    padding: 18px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgb(73, 54, 31),
+            rgb(52, 39, 25)
+        );
+
+    color: rgb(241, 211, 153);
+
+    border: 2px solid rgb(190, 137, 48);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.35),
+        inset 0 0 20px rgba(0, 0, 0, 0.2);
+
+    box-sizing: border-box;
+}
+
+
+/* QUESTION NUMBER */
+
+span.progress {
+    display: block;
+
+    text-align: center;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+
+    color: rgb(239, 199, 108);
+
+    margin-bottom: 12px;
+}
+
+
+/* ==========================================
+   PROGRESS BAR
+========================================== */
+
+
+
+
+
+/* ==========================================
+   QUESTION CARD
+========================================== */
+
+section.question-container {
+    max-width: 1000px;
+
+    margin: 30px auto;
+
+    padding: 38px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgb(244, 225, 182),
+            rgb(221, 197, 145)
+        );
+
+    color: rgb(49, 37, 23);
+
+    border: 3px solid rgb(197, 145, 48);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.4),
+        inset 0 0 25px rgba(116, 78, 29, 0.12);
+
+    position: relative;
+
+    box-sizing: border-box;
+}
+
+
+/* little corner decoration */
+
+section.question-container::before,
+section.question-container::after {
+    content: "✦";
+
+    position: absolute;
+
+    color: rgb(175, 119, 35);
+
+    font-size: 20px;
+}
+
+section.question-container::before {
+    top: 12px;
+    left: 18px;
+}
+
+section.question-container::after {
+    bottom: 12px;
+    right: 18px;
+}
+
+
+/* QUESTION */
+
+.question {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 29px;
+
+    line-height: 1.5;
+
+    text-align: center;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   OPTIONS
+========================================== */
+
+.options {
+    width: 90%;
+
+    max-width: 850px;
+
+    margin: 30px auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+/* OPTION */
+
+.option {
+    min-height: 82px;
+
+    padding: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgb(69, 53, 34),
+            rgb(51, 69, 64)
+        );
+
+    color: rgb(245, 220, 166);
+
+    border: 2px solid rgb(169, 124, 50);
+
+    border-radius: 16px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    letter-spacing: 0.4px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* OPTION HOVER */
+
+.option:hover:not(:disabled) {
+
+    transform: translateY(-5px) scale(1.01);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgb(91, 66, 37),
+            rgb(38, 94, 88)
+        );
+
+    border-color: rgb(231, 184, 74);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.4),
+        0 0 12px rgba(222, 163, 61, 0.15);
+}
+
+
+/* SELECTED */
+
+.option.selected {
+    transform: scale(1.02);
+
+    border-color: rgb(239, 199, 108);
+}
+
+
+/* CORRECT */
+
+.option.correct {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgb(50, 111, 91),
+            rgb(34, 82, 73)
+        );
+
+    color: rgb(242, 230, 193);
+
+    border-color: rgb(105, 190, 154);
+
+    box-shadow:
+        0 0 18px rgba(105, 190, 154, 0.25);
+}
+
+
+/* WRONG */
+
+.option.wrong {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgb(110, 54, 40),
+            rgb(78, 35, 31)
+        );
+
+    color: rgb(244, 210, 184);
+
+    border-color: rgb(180, 92, 67);
+
+    box-shadow:
+        0 0 15px rgba(180, 92, 67, 0.2);
+}
+
+
+/* DISABLED */
+
+.option:disabled {
+    cursor: default;
+}
+
+
+/* ==========================================
+   ANSWER TOAST
+========================================== */
+
+.answer-toast {
+
+    width: 85%;
+
+    max-width: 700px;
+
+    margin: 22px auto;
+
+    padding: 16px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgb(54, 43, 28),
+            rgb(32, 55, 52)
+        );
+
+    color: rgb(235, 207, 151);
+
+    border: 1px solid rgb(190, 137, 48);
+
+    border-radius: 14px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* ==========================================
+   EXPLANATION
+========================================== */
+
+.explain {
+
+    width: 85%;
+
+    max-width: 850px;
+
+    margin: 25px auto;
+
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    background:
+        rgb(231, 211, 166);
+
+    color: rgb(57, 43, 27);
+
+    border-left: 5px solid rgb(190, 137, 48);
+
+    border-radius: 8px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ==========================================
+   NEXT BUTTON
+========================================== */
+
+.next-btn {
+
+    display: block;
+
+    margin: 30px auto;
+
+    padding: 15px 43px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgb(192, 137, 45),
+            rgb(128, 86, 27)
+        );
+
+    color: rgb(35, 28, 19);
+
+    border: 2px solid rgb(235, 192, 84);
+
+    border-radius: 13px;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.next-btn:hover:not(:disabled) {
+
+    transform: translateY(-4px);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgb(224, 174, 68),
+            rgb(160, 108, 30)
+        );
+
+    box-shadow:
+        0 9px 22px rgba(0, 0, 0, 0.45),
+        0 0 15px rgba(222, 163, 61, 0.25);
+}
+
+
+.next-btn:disabled {
+
+    opacity: 0.4;
+
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.royal-footer {
+
+    margin-top: 60px;
+
+    padding: 32px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgb(29, 25, 19),
+            rgb(25, 47, 45)
+        );
+
+    color: rgb(214, 190, 140);
+
+    text-align: center;
+
+    border-top: 2px solid rgb(190, 137, 48);
+
+    box-shadow:
+        0 -8px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+.footer-ornament {
+
+    color: rgb(219, 165, 57);
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+
+.footer-title {
+
+    font-family: "Cinzel", serif;
+
+    color: rgb(225, 181, 75);
+
+    font-size: 15px;
+
+    letter-spacing: 3px;
+}
+
+
+.footer-tagline {
+
+    font-size: 18px;
+
+    letter-spacing: 1px;
+}
+
+
+.footer-copy {
+
+    font-size: 14px;
+
+    opacity: 0.65;
+
+    font-style: italic;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+    h1 {
+        font-size: 27px;
+    }
+
+    header h2 {
+        font-size: 16px;
+    }
+
+    section.question-container {
+        margin: 20px 15px;
+
+        padding: 28px 18px;
+    }
+
+    .question {
+        font-size: 23px;
+    }
+
+    .options {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        gap: 13px;
+    }
+
+    .option {
+        min-height: 65px;
+
+        font-size: 18px;
+
+        padding: 18px;
+    }
+
+    .explain {
+        width: 90%;
+    }
+}
