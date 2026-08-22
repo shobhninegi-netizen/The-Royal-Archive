@@ -1,0 +1,489 @@
+/* =====================================================
+   THE ROYAL ARCHIVE — SCIENCE
+   Emerald • Sea Green • Ivory
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at top,
+            #0B5A4B 0%,
+            #063F35 38%,
+            #02251F 100%
+        );
+
+    color: #F6F0DF;
+
+    font-family: "Poppins", sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 35px 20px;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: "Cinzel", serif;
+
+    font-size: 2.4rem;
+    letter-spacing: 4px;
+
+    color: #F6F0DF;
+
+    text-shadow:
+        0 0 15px rgba(47, 174, 145, 0.45);
+
+    margin-bottom: 8px;
+}
+
+header h2 {
+    font-family: "Cinzel", serif;
+
+    font-size: 1.2rem;
+    letter-spacing: 6px;
+
+    color: #2FAE91;
+
+    margin-bottom: 12px;
+}
+
+.ornament {
+    color: #C9A75D;
+
+    font-size: 1rem;
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ================= PROGRESS ================= */
+
+header .question-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: auto;
+}
+
+.progress {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 75px;
+    height: 34px;
+
+    padding: 0 18px;
+
+    background: rgba(3, 40, 32, 0.8);
+
+    border: 1px solid #2FAE91;
+    border-radius: 20px;
+
+    color: #F6F0DF;
+
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 0 14px rgba(47, 174, 145, 0.2);
+}
+
+
+/* ================= QUESTION ================= */
+
+section.question-container {
+    width: 100%;
+    max-width: 850px;
+
+    min-height: 190px;
+
+    margin-top: 35px;
+    padding: 40px 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22, 124, 107, 0.38),
+            rgba(3, 40, 32, 0.92)
+        );
+
+    border: 1px solid #2FAE91;
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.35),
+        inset 0 0 25px rgba(47, 174, 145, 0.08);
+}
+
+.question {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.8rem;
+    line-height: 1.45;
+
+    color: #F6F0DF;
+
+    max-width: 750px;
+}
+
+
+/* ================= OPTIONS ================= */
+
+.options {
+    width: 100%;
+    max-width: 850px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    margin-top: 25px;
+}
+
+.option {
+    min-height: 72px;
+
+    padding: 16px 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22, 124, 107, 0.35),
+            rgba(6, 63, 53, 0.9)
+        );
+
+    border: 1px solid rgba(47, 174, 145, 0.7);
+    border-radius: 14px;
+
+    color: #F6F0DF;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.option:hover {
+    transform: translateY(-3px);
+
+    background:
+        linear-gradient(
+            145deg,
+            #167C6B,
+            #0B5A4B
+        );
+
+    border-color: #C9A75D;
+
+    box-shadow:
+        0 8px 22px rgba(47, 174, 145, 0.25);
+}
+
+.option:disabled {
+    cursor: default;
+}
+
+
+/* ================= ANSWER TOAST ================= */
+
+.answer-toast {
+    width: 100%;
+    max-width: 850px;
+
+    margin-top: 20px;
+
+    padding: 14px 20px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    background: rgba(3, 40, 32, 0.9);
+
+    border: 1px solid #C9A75D;
+
+    color: #F6F0DF;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.15rem;
+
+    box-shadow:
+        0 0 18px rgba(201, 167, 93, 0.15);
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* ================= EXPLANATION ================= */
+
+.explain {
+    width: 100%;
+    max-width: 850px;
+
+    min-height: 55px;
+
+    margin-top: 16px;
+    padding: 16px 22px;
+
+    text-align: center;
+
+    color: #F6F0DF;
+
+    background: rgba(3, 40, 32, 0.65);
+
+    border-left: 3px solid #2FAE91;
+    border-right: 3px solid #2FAE91;
+
+    border-radius: 10px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.15rem;
+    line-height: 1.5;
+}
+
+
+/* ================= NEXT BUTTON ================= */
+
+.next-btn {
+    margin-top: 25px;
+
+    padding: 13px 32px;
+
+    background: transparent;
+
+    border: 1px solid #C9A75D;
+    border-radius: 30px;
+
+    color: #F6F0DF;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.next-btn:hover {
+    background: #C9A75D;
+
+    color: #02251F;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 20px rgba(201, 167, 93, 0.25);
+}
+
+.next-btn:disabled {
+    cursor: default;
+    opacity: 0.6;
+}
+
+
+/* ================= FOOTER ================= */
+
+.royal-footer {
+    width: 100%;
+    max-width: 900px;
+
+    margin-top: 60px;
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(47, 174, 145, 0.35);
+}
+
+.footer-ornament {
+    color: #C9A75D;
+
+    font-size: 1.5rem;
+
+    margin-bottom: 10px;
+}
+
+.footer-title {
+    font-family: "Cinzel", serif;
+
+    color: #F6F0DF;
+
+    letter-spacing: 3px;
+
+    font-size: 0.95rem;
+}
+
+.footer-tagline {
+    margin-top: 8px;
+
+    color: #2FAE91;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1rem;
+}
+
+.footer-copy {
+    margin-top: 8px;
+
+    color: rgba(246, 240, 223, 0.55);
+
+    font-size: 0.75rem;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+        letter-spacing: 3px;
+    }
+
+    header h2 {
+        font-size: 1rem;
+        letter-spacing: 4px;
+    }
+
+    section.question-container {
+        min-height: 180px;
+        padding: 30px 25px;
+    }
+
+    .question {
+        font-size: 1.45rem;
+    }
+
+    .options {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .option {
+        min-height: 65px;
+    }
+}
+
+
+/* ================= PHONE ================= */
+
+@media (max-width: 450px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    header h1 {
+        font-size: 1.45rem;
+        letter-spacing: 2px;
+    }
+
+    header h2 {
+        font-size: 0.85rem;
+        letter-spacing: 3px;
+    }
+
+    .ornament {
+        font-size: 0.75rem;
+    }
+
+    .progress {
+        min-width: 70px;
+        height: 30px;
+
+        font-size: 0.75rem;
+    }
+
+    section.question-container {
+        margin-top: 25px;
+
+        min-height: 170px;
+
+        padding: 25px 18px;
+
+        border-radius: 14px;
+    }
+
+    .question {
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    .option {
+        min-height: 62px;
+
+        padding: 13px 15px;
+
+        font-size: 0.9rem;
+
+        border-radius: 12px;
+    }
+
+    .answer-toast {
+        font-size: 1rem;
+    }
+
+    .explain {
+        font-size: 1rem;
+        padding: 14px 16px;
+    }
+
+    .next-btn {
+        padding: 11px 25px;
+        font-size: 0.8rem;
+    }
+
+    .royal-footer {
+        margin-top: 45px;
+    }
+}
