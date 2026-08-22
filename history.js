@@ -416,20 +416,8 @@ nextBtn.addEventListener("click", () => {
             "royalArchiveBestScore",
             bestScore
         );
-showQuizComplete();
+
     }
 
 });
-const quizCompleteOverlay =
-    document.getElementById("quizCompleteOverlay");
 
-const backHomeBtn =
-    document.getElementById("backHomeBtn");
-
-function showQuizComplete() {
-    quizCompleteOverlay.classList.add("show");
-}
-
-backHomeBtn.addEventListener("click", function () {
-    window.location.href = "index.html";
-});
