@@ -203,12 +203,14 @@ h1{
 
 /* ---------- DECORATIVE IMAGES ---------- */
 
+/* ---------- DECORATIVE IMAGES ---------- */
+
 .top-right{
     position: absolute;
     top: 25px;
     right: 25px;
-    width: 150px !important;
-    height: 150px;
+    width: 280px;
+    height: 180px;
     object-fit: cover;
     border-radius: 25px;
     filter: grayscale(100%);
@@ -219,8 +221,8 @@ h1{
     position: absolute;
     bottom: 40px;
     left: 25px;
-    width: 150px !important;
-    height: 150px;
+    width: 280px;
+    height: 180px;
     object-fit: cover;
     border-radius: 25px;
     filter: grayscale(100%);
