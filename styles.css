@@ -9,16 +9,18 @@ body{
     font-family: "Poppins", sans-serif;
     color:white;
 }
+
 p{
     font-family:"poppins",sans-serif;
-text-align: center;
-font-family: "Cormorant Garamond", serif;
-color:#EADDCB;
-}
-h2{
-    font-family:"Poppins",sans-serif ;
     text-align: center;
-    margin-bottom:10px ;
+    font-family: "Cormorant Garamond", serif;
+    color:#EADDCB;
+}
+
+h2{
+    font-family:"Poppins",sans-serif;
+    text-align: center;
+    margin-bottom:10px;
     margin-top: 10px;
     color: #FFF8E7;
     font-weight: 200;
@@ -27,25 +29,26 @@ h2{
 h1{
     font-family:"Cinzel",serif;
     text-align: center;
-    
 }
+
 .heading-decoration{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
+
 .line{
     width:150px;
-  background-color:rgb(238, 206, 27) ;
+    background-color:rgb(238, 206, 27);
     height:3px;
     margin-left: 20px;
     margin-right: 20px;
 }
+
 .ornament{
     color:#ffe346;
-   
 }
+
 .categories{
     display: grid;
     grid-template-columns: repeat(3,230px);
@@ -53,6 +56,7 @@ h1{
     gap:50px;
     align-items: center;
 }
+
 .category-card {
     display: flex;
     flex-direction: column;
@@ -61,15 +65,15 @@ h1{
     width: 230px;
     height: 230px;
     border-radius: 20px;
-    border:3px solid gold ;
-    background-color: white ;
+    border:3px solid gold;
+    background-color: white;
     gap:30px;
     color:black;
     margin-right: 10px;
     cursor: pointer;
-     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .chronicle-preview h2{
     color: #4A1625;
     font-weight: 700;
@@ -77,6 +81,7 @@ h1{
     letter-spacing: 2px;
     margin-bottom: 15px;
 }
+
 .chronicle-preview p{
     color:#4A1625;
     line-height:1.7;
@@ -88,6 +93,7 @@ h1{
     gap:15px;
     margin-top:25px;
 }
+
 .divider{
     width:70%;
     height:2px;
@@ -100,25 +106,23 @@ h1{
         transparent
     );
 }
-.difficulty-btn{
 
+.difficulty-btn{
     transition:.3s;
 }
 
 .difficulty-btn:hover{
-
     transform:translateY(-4px);
-
     box-shadow:0 10px 20px rgba(0,0,0,.25);
 }
-.difficulty-btn.active{
 
+.difficulty-btn.active{
     background:#6d0019;
     color:white;
     border:2px solid gold;
-
     transform:scale(1.05);
 }
+
 .hidden {
     display: none;
 }
@@ -127,19 +131,21 @@ h1{
     background: #D4AF37;
     color: #4A1625;
 }
+
 .category-card.active{
     transform: translateY(-15px);
     box-shadow: 0 15px 30px rgba(212, 175, 55, 0.5);
 }
-.category-card  h3{
+
+.category-card h3{
     margin-top: 15px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 2px;
     font-family: Arial,sans-serif;
-    text-align:center ;
-
+    text-align:center;
 }
+
 .chronicle-preview{
     width: 650px;
     margin: 40px auto;
@@ -152,24 +158,29 @@ h1{
     text-align: center;
     color: #3d1b1b;
 }
+
 .preview-icon{
     font-size: 4rem;
     display: block;
     margin-bottom: 15px;
 }
+
 #difficulty-heading{
     font-family: "Cinzel", serif;
     letter-spacing: 3px;
     margin-bottom: 15px;
 }
+
 .icon{
     font-size: 4.5rem;
 }
+
 .stats{
     display: flex;
     flex-direction: row;
     gap:20px;
 }
+
 .stat-card{
     display: flex;
     flex-direction: column;
@@ -185,42 +196,32 @@ h1{
     margin-left: 10px;
     border: 3px solid gold;
 }
+
 .icon2{
     font-size: 1.5rem;
 }
+
+/* ---------- DECORATIVE IMAGES ---------- */
 
 .top-right{
     position: absolute;
     top: 20px;
     right: 20px;
     margin-right: 0;
-    width: 350px;
+    width: 180px;
     border-radius: 30px;
-    
     filter: grayscale(100%);
-
 }
-.divider{
-    width:70%;
-    height:2px;
-    margin:30px auto;
 
-    background:linear-gradient(
-        to right,
-        transparent,
-        gold,
-        transparent
-    );
-}
 .bottom-left{
     position: absolute;
     bottom: 70px;
     left: 20px;
-    width: 350px;
+    width: 180px;
     filter: grayscale(100%);
     border-radius: 30px;
-    
 }
+
 footer{
     border-radius: 10px;
     border: 1px gold;
@@ -229,14 +230,18 @@ footer{
     color: #EADDCB;
     font-family: "Cormorant Garamond", serif;
 }
+
 .xp-count{
     color:rgb(60, 20, 20);
     font-size: large;
 }
+
 .best-score{
     color:rgb(60, 20, 20);
     font-size: large;
 }
+
+
 /* ==========================================
    MOBILE RESPONSIVE — THE ROYAL ARCHIVE
    ========================================== */
@@ -387,7 +392,9 @@ footer{
     }
 
 }
-    /* ---------- DECORATIVE IMAGES ---------- */
+
+
+/* ---------- DECORATIVE IMAGES ---------- */
 
 @media (max-width: 768px) {
 
@@ -395,8 +402,6 @@ footer{
     .bottom-left {
         display: none;
     }
-
-
 
 
     /* ---------- DIVIDER ---------- */
