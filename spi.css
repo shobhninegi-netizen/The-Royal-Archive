@@ -1,0 +1,349 @@
+/* ==========================================
+   THE ROYAL ARCHIVE — SPIRITUALITY
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 15%, rgba(139, 110, 70, 0.16), transparent 28%),
+        radial-gradient(circle at 15% 80%, rgba(80, 100, 120, 0.12), transparent 30%),
+        linear-gradient(135deg, #0d1015, #15171c 45%, #0b0d11);
+
+    color: #eee8dc;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 20px 0;
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+header {
+    width: 100%;
+    max-width: 950px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(1.5rem, 4vw, 2.4rem);
+    letter-spacing: 5px;
+    color: #d8c29d;
+    text-shadow: 0 0 18px rgba(216, 194, 157, 0.18);
+}
+
+header h2 {
+    margin-top: 12px;
+    font-family: "Cinzel", serif;
+    font-size: 1.15rem;
+    letter-spacing: 6px;
+    color: #a99b83;
+}
+
+.ornament {
+    margin: 18px 0 22px;
+    color: #8f7955;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+}
+
+/* ==========================================
+   QUESTION NUMBER
+   ========================================== */
+
+header .question-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.question-number {
+    display: inline-block;
+    padding: 7px 18px;
+    border: 1px solid rgba(190, 164, 116, 0.35);
+    border-radius: 30px;
+
+    font-family: "Cinzel", serif;
+    font-size: 0.78rem;
+    letter-spacing: 3px;
+
+    color: #cdb88f;
+    background: rgba(255, 255, 255, 0.025);
+    box-shadow: 0 0 20px rgba(160, 130, 80, 0.08);
+}
+
+/* ==========================================
+   QUESTION CARD
+   ========================================== */
+
+section.question-container {
+    width: min(900px, 100%);
+    min-height: 190px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 5px auto 25px;
+    padding: 40px 45px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.045),
+            rgba(255,255,255,0.015)
+        );
+
+    border: 1px solid rgba(194, 168, 117, 0.22);
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.35),
+        inset 0 0 30px rgba(255,255,255,0.015);
+}
+
+/* mystical corner ornaments */
+
+section.question-container::before,
+section.question-container::after {
+    position: absolute;
+    font-family: serif;
+    color: #907750;
+    font-size: 1.5rem;
+}
+
+section.question-container::before {
+    content: "✦";
+    top: 13px;
+    left: 18px;
+}
+
+section.question-container::after {
+    content: "✦";
+    bottom: 13px;
+    right: 18px;
+}
+
+.question {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 500;
+    color: #eee5d4;
+}
+
+/* ==========================================
+   OPTIONS
+   ========================================== */
+
+.options {
+    width: min(900px, 100%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.option {
+    min-height: 70px;
+    padding: 15px 20px;
+
+    border-radius: 12px;
+    border: 1px solid rgba(185, 158, 108, 0.22);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.045),
+            rgba(255,255,255,0.015)
+        );
+
+    color: #dcd5c8;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.option:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(205, 180, 130, 0.65);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(164, 136, 91, 0.16),
+            rgba(255,255,255,0.035)
+        );
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.option:disabled {
+    cursor: default;
+}
+
+/* ==========================================
+   ANSWER TOAST
+   ========================================== */
+
+.answer-toast {
+    margin-top: 22px;
+    padding: 10px 22px;
+
+    border-radius: 30px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(190,165,115,0.25);
+}
+
+.hidden {
+    display: none;
+}
+
+/* ==========================================
+   EXPLANATION
+   ========================================== */
+
+.explain {
+    width: min(850px, 100%);
+    min-height: 40px;
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.12rem;
+    line-height: 1.5;
+
+    color: #bdb5a6;
+}
+
+/* ==========================================
+   NEXT BUTTON
+   ========================================== */
+
+.next-btn {
+    margin-top: 25px;
+    padding: 13px 30px;
+
+    border: 1px solid #9d8357;
+    border-radius: 30px;
+
+    background: transparent;
+    color: #d8c29d;
+
+    font-family: "Cinzel", serif;
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.next-btn:hover {
+    background: rgba(157, 131, 87, 0.12);
+    box-shadow: 0 0 22px rgba(157, 131, 87, 0.15);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.royal-footer {
+    width: 100%;
+    margin-top: 65px;
+    padding: 35px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(190, 165, 115, 0.15);
+
+    background: rgba(0,0,0,0.12);
+}
+
+.footer-ornament {
+    color: #9b8157;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.footer-title {
+    font-family: "Cinzel", serif;
+    letter-spacing: 4px;
+    color: #c9b48c;
+    font-size: 0.85rem;
+}
+
+.footer-tagline {
+    margin-top: 8px;
+    color: #8e887c;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+}
+
+.footer-copy {
+    margin-top: 10px;
+    color: #5f5c56;
+    font-size: 0.7rem;
+}
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 25px 14px 0;
+    }
+
+    header h1 {
+        letter-spacing: 3px;
+    }
+
+    header h2 {
+        letter-spacing: 4px;
+    }
+
+    section.question-container {
+        min-height: 210px;
+        padding: 30px 25px;
+    }
+
+    .options {
+        grid-template-columns: 1fr;
+    }
+
+    .option {
+        min-height: 62px;
+    }
+
+    .question {
+        font-size: 1.35rem;
+    }
+
+    .royal-footer {
+        margin-top: 45px;
+    }
+}
