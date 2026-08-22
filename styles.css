@@ -229,3 +229,276 @@ footer{
     color: #EADDCB;
     font-family: "Cormorant Garamond", serif;
 }
+.xp-count{
+    color:rgb(60, 20, 20);
+    font-size: large;
+}
+.best-score{
+    color:rgb(60, 20, 20);
+    font-size: large;
+}
+/* ==========================================
+   MOBILE RESPONSIVE — THE ROYAL ARCHIVE
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 0 12px;
+        overflow-x: hidden;
+    }
+
+    /* ---------- HEADER ---------- */
+
+    h1 {
+        font-size: 1.55rem;
+        line-height: 1.3;
+        margin-top: 25px;
+    }
+
+    h2 {
+        font-size: 1rem;
+        margin-top: 8px;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .heading-decoration {
+        margin: 10px 0;
+    }
+
+    .line {
+        width: 55px;
+        height: 2px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .ornament {
+        font-size: 0.9rem;
+    }
+
+
+    /* ---------- CATEGORY GRID ---------- */
+
+    .categories {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        width: 100%;
+        max-width: 500px;
+        margin: 20px auto;
+    }
+
+    .category-card {
+        width: 100%;
+        height: 165px;
+        margin: 0;
+        border-width: 2px;
+        border-radius: 16px;
+        gap: 12px;
+    }
+
+    .category-card h3 {
+        font-size: 0.78rem;
+        letter-spacing: 1px;
+        margin-top: 5px;
+    }
+
+    .icon {
+        font-size: 3rem;
+    }
+
+
+    /* ---------- CHRONICLE PREVIEW ---------- */
+
+    .chronicle-preview {
+        width: 100%;
+        max-width: 500px;
+        margin: 25px auto;
+        padding: 25px 18px;
+        border-width: 2px;
+        border-radius: 16px;
+    }
+
+    .chronicle-preview h2 {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .chronicle-preview p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .preview-icon {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+
+    /* ---------- DIFFICULTY ---------- */
+
+    .difficulty {
+        width: 100%;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .difficulty-btn {
+        width: 100%;
+        min-height: 48px;
+        font-size: 0.9rem;
+    }
+
+    #difficulty-heading {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+    }
+
+
+    /* ---------- STATS ---------- */
+
+    .stats {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .stat-card {
+        width: calc(50% - 8px);
+        max-width: 150px;
+        height: 90px;
+        margin: 0;
+        border-width: 2px;
+        border-radius: 15px;
+    }
+
+    .icon2 {
+        font-size: 1.3rem;
+    }
+
+    .xp-count,
+    .best-score {
+        font-size: 0.85rem;
+    }
+
+}
+    /* ---------- DECORATIVE IMAGES ---------- */
+
+@media (max-width: 768px) {
+
+    .top-right,
+    .bottom-left {
+        display: none;
+    }
+
+
+
+
+    /* ---------- DIVIDER ---------- */
+
+    .divider {
+        width: 85%;
+        margin: 22px auto;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+        margin-top: 30px;
+        padding: 25px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+
+/* ==========================================
+   SMALL PHONES
+   ========================================== */
+
+@media (max-width: 430px) {
+
+    body {
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 0.9rem;
+    }
+
+    .line {
+        width: 35px;
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .category-card {
+        height: 145px;
+        border-radius: 14px;
+    }
+
+    .icon {
+        font-size: 2.5rem;
+    }
+
+    .category-card h3 {
+        font-size: 0.68rem;
+        letter-spacing: 0.8px;
+    }
+
+    .chronicle-preview {
+        padding: 22px 15px;
+    }
+
+    .chronicle-preview h2 {
+        font-size: 1rem;
+    }
+
+    .chronicle-preview p {
+        font-size: 0.84rem;
+    }
+
+    .stat-card {
+        height: 82px;
+    }
+}
+
+
+/* ==========================================
+   VERY SMALL PHONES
+   ========================================== */
+
+@media (max-width: 350px) {
+
+    .categories {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        height: 135px;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 150px;
+    }
+}
