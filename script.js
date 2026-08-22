@@ -1,5 +1,17 @@
 
 console.log("JS connected");
+const xpDisplay = document.querySelector(".xp-count");
+const savedXP = localStorage.getItem("royalArchiveXP");
+if (savedXP !== null) {
+    xpDisplay.textContent = savedXP;
+
+}
+const bestScoreDisplay = document.querySelector(".best-score");
+const savedBestScore = localStorage.getItem("royalArchiveBestScore");
+
+if (savedBestScore !== null) {
+    bestScoreDisplay.textContent = savedBestScore;
+}
 let selectedDifficulty="";
 let selectedCategory = "";
 const categoryCard = document.querySelectorAll(".category-card");
@@ -10,6 +22,7 @@ const difficulty = document.querySelector(".difficulty");
 const startSection = document.querySelector(".start-section");
 const difficultybtn = document.querySelectorAll(".difficulty-btn");
 const previewIcon = document.getElementById("category-icon");
+const startBtn = document.getElementById("start-btn");
 console.log(categoryCard.length);
 
 const categoryInfo=  {
@@ -17,14 +30,11 @@ const categoryInfo=  {
         icon:"🏛️",
         heading:" History",
         description:"Walk through the chronicles of great empires, legendary rulers, and defining moments that shaped our world."},
-        maths:{
-            icon:"📐",
-            heading:" Mathematics",
+        puzzle:{
+            icon:"🧠",
+            heading:" Puzzle",
         description:"Where logic meets precision. Solve problems, uncover patterns, and master the language of numbers."},
-        computer:{
-            icon:"⚙️",
-            heading:" Computer",
-            description:"Step into the digital realm where algorithms, programming, and technology shape the future."},
+        
             science:{
                 icon:"⚗️",
                 heading:" Science",
@@ -33,10 +43,8 @@ const categoryInfo=  {
                     icon:"🪶",
                     heading:" Literature",
                     description:"Journey through timeless stories, remarkable authors, and the beauty of language and imagination."},
-                 geography:{
-                    icon:"🧭",
-                    heading:" Geography",
-                    description:"Travel across continents, cultures, landscapes, and natural wonders from every corner of the world."},
+                
+                    
                     gk:{
                         icon:"💡",
                         heading:" General Knowledge",
@@ -47,11 +55,8 @@ const categoryInfo=  {
                         heading:" Spirituality",
                         description:"Reflect upon wisdom, philosophy, inner peace, and the timeless teachings that guide humanity."
                        },
-                       entertainment:{
-                        icon:"🎬",
-                        heading:"entertainment",
-                        description:"Celebrate cinema, music, television, and the creative stories that inspire and entertain generations."}
-                    }
+                    }; 
+                       
 categoryCard.forEach((card)=>{
     card.addEventListener("click",()=> {
         categoryCard.forEach((item) =>{
@@ -95,6 +100,17 @@ button.classList.add("active");
 selectedDifficulty = button.dataset.level;
 startSection.classList.remove("hidden");
 });
+});
+startBtn.addEventListener("click"  ,()=>{
+
+
+    if (selectedCategory === "" || selectedDifficulty === "") {
+        alert("Please select a category and difficulty first.");
+        return;
+    }
+    localStorage.setItem("category",selectedCategory);
+    localStorage.setItem("difficulty",selectedDifficulty);
+window.location.href = selectedCategory + ".html";
 });
 
 
