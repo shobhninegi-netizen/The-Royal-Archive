@@ -191,10 +191,10 @@ h1{
 
 .top-right{
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 30px;
     margin-right: 0;
-    width: 350px;
+    width: 320px;
     border-radius: 30px;
     
     filter: grayscale(100%);
