@@ -110,7 +110,11 @@ startBtn.addEventListener("click"  ,()=>{
     }
     localStorage.setItem("category",selectedCategory);
     localStorage.setItem("difficulty",selectedDifficulty);
-window.location.href = selectedCategory + ".html";
+if (selectedCategory === "spirituality") {
+    window.location.href = "spi.html";
+} else {
+    window.location.href = selectedCategory + ".html";
+}
 });
 
 
