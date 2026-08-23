@@ -212,14 +212,16 @@ h1{
         transparent
     );
 }
-.bottom-left{
+.bottom-left {
     position: absolute;
-    bottom: 70px;
-    left: 20px;
-    width: 350px;
+    top: 330px;
+    left: 25px;
+    width: 330px;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 25px;
     filter: grayscale(100%);
-    border-radius: 30px;
-    
+    z-index: 0;
 }
 footer{
     border-radius: 10px;
