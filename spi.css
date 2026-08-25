@@ -311,7 +311,7 @@ section.question-container::after {
    MOBILE — THE ROYAL ARCHIVE
    ========================================== */
 
-@media (max-width: 650px) {
+@media (max-width: 550px) {
 
     body {
         padding: 22px 14px 0;
