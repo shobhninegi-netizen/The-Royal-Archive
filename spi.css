@@ -307,51 +307,47 @@ section.question-container::after {
     color: #5f5c56;
     font-size: 0.7rem;
 }
+/* ==========================================
+   MOBILE — THE ROYAL ARCHIVE
+   ========================================== */
 
-/* ================= PHONE VIEW ================= */
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
     body {
-        width: 100%;
-        min-height: 100vh;
-        padding: 15px;
-        margin: 0;
-        overflow-x: hidden;
+        padding: 22px 14px 0;
     }
 
-    header {
-        width: 100%;
-        text-align: center;
-    }
+    /* HEADER */
 
     header h1 {
-        font-size: 21px;
-        margin: 0;
+        font-size: 1.45rem;
+        letter-spacing: 2.5px;
+        line-height: 1.35;
     }
 
     header h2 {
-        font-size: 15px;
-        margin: 5px 0;
+        margin-top: 8px;
+        font-size: 0.9rem;
+        letter-spacing: 4px;
     }
 
     .ornament {
-        font-size: 10px;
-        margin: 6px 0 12px;
+        margin: 12px 0 16px;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
     }
 
 
-    /* 3/8 */
+    /* QUESTION NUMBER */
 
-    header > .question-container {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        margin: 0;
+    header .question-container {
+        margin-bottom: 12px;
     }
 
     .question-number {
-        font-size: 11px;
-        padding: 5px 10px;
+        padding: 6px 14px;
+        font-size: 0.68rem;
+        letter-spacing: 2px;
     }
 
 
@@ -359,23 +355,29 @@ section.question-container::after {
 
     section.question-container {
         width: 100%;
-        margin: 12px 0 15px;
-        padding: 20px 15px;
+        min-height: 175px;
 
-        min-height: 130px;
+        margin: 5px auto 18px;
+        padding: 28px 22px;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        border-radius: 15px;
+    }
 
-        border-radius: 14px;
+    section.question-container::before {
+        top: 10px;
+        left: 13px;
+        font-size: 1.1rem;
+    }
+
+    section.question-container::after {
+        bottom: 10px;
+        right: 13px;
+        font-size: 1.1rem;
     }
 
     .question {
-        width: 100%;
-        font-size: 20px;
-        line-height: 1.4;
-        text-align: center;
+        font-size: 1.3rem;
+        line-height: 1.45;
     }
 
 
@@ -383,23 +385,26 @@ section.question-container::after {
 
     .options {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        margin: 0;
+        grid-template-columns: 1fr;
+        gap: 11px;
     }
 
     .option {
         width: 100%;
-        min-height: 52px;
+        min-height: 57px;
 
-        padding: 12px 15px;
-
-        font-size: 14px;
-        line-height: 1.3;
+        padding: 13px 16px;
 
         border-radius: 10px;
+
+        font-size: 0.82rem;
+        line-height: 1.4;
+
+        text-align: left;
+    }
+
+    .option:hover {
+        transform: none;
     }
 
 
@@ -407,95 +412,114 @@ section.question-container::after {
 
     .answer-toast {
         width: 100%;
-        margin: 12px 0 0;
-        padding: 10px;
 
-        font-size: 13px;
-        text-align: center;
+        margin-top: 17px;
+        padding: 9px 15px;
+
+        font-size: 0.76rem;
     }
+
+
+    /* EXPLANATION */
 
     .explain {
         width: 100%;
-        min-height: 45px;
 
-        margin: 7px 0 0;
-        padding: 5px 10px;
+        margin-top: 10px;
+        padding: 0 8px;
 
-        font-size: 14px;
-        line-height: 1.4;
-        text-align: center;
+        min-height: 38px;
+
+        font-size: 1rem;
+        line-height: 1.45;
     }
 
 
-    /* NEXT BUTTON */
+    /* NEXT */
 
     .next-btn {
-        width: 100%;
-        margin: 12px 0 0;
+        margin-top: 17px;
 
-        padding: 13px 10px;
+        padding: 11px 25px;
 
-        font-size: 14px;
-        border-radius: 10px;
+        font-size: 0.74rem;
+        letter-spacing: 1.8px;
     }
 
 
     /* FOOTER */
 
     .royal-footer {
-        width: 100%;
-        margin-top: 25px;
-        padding: 15px 5px 8px;
-
-        text-align: center;
+        margin-top: 42px;
+        padding: 25px 12px 22px;
     }
 
     .footer-ornament {
-        font-size: 18px;
+        font-size: 1.25rem;
+        margin-bottom: 9px;
     }
 
     .footer-title {
-        font-size: 11px;
+        font-size: 0.72rem;
+        letter-spacing: 2.5px;
     }
 
     .footer-tagline {
-        font-size: 12px;
+        margin-top: 6px;
+        font-size: 0.9rem;
     }
 
     .footer-copy {
-        font-size: 8px;
+        margin-top: 8px;
+        font-size: 0.62rem;
     }
 }
 
 
-/* EXTRA SMALL PHONES */
+/* ==========================================
+   VERY SMALL PHONES
+   ========================================== */
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
 
     body {
-        padding: 12px;
+        padding: 18px 11px 0;
     }
 
     header h1 {
-        font-size: 19px;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
     }
 
     header h2 {
-        font-size: 14px;
+        font-size: 0.82rem;
+        letter-spacing: 3px;
     }
 
-    .question {
-        font-size: 18px;
+    .ornament {
+        font-size: 0.7rem;
     }
 
     section.question-container {
-        min-height: 115px;
-        padding: 17px 12px;
+        min-height: 160px;
+        padding: 25px 18px;
+    }
+
+    .question {
+        font-size: 1.18rem;
     }
 
     .option {
-        min-height: 48px;
-        font-size: 13px;
+        min-height: 53px;
+        padding: 11px 14px;
+        font-size: 0.78rem;
+    }
+
+    .next-btn {
+        padding: 10px 22px;
+    }
+
+    .royal-footer {
+        margin-top: 35px;
     }
 }
-
